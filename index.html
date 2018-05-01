@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Onsen Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <ons-page>
+        <ons-navigator swipeable id="myNavigator" page="homepage.html"></ons-navigator>
+
+        <ons-toolbar>
+            <div class="center">Toolbar</div>
+        </ons-toolbar>
+
+        <ons-tabbar swipeable position="auto">
+            <ons-tab page="homepage.html" label="Homepage" icon="ion-home, material:md-home" active></ons-tab>
+            <ons-tab page="tabpage1.html" label="Tabbed 1" icon="ion-social-android"></ons-tab>
+            <ons-tab page="pages/tabpage2.html" label="Tabbed 2" icon="ion-android-folder"></ons-tab>
+        </ons-tabbar>
+    </ons-page>
+
+    <template id="homepage.html">
+        <ons-page id="homepage">
+            <ons-button onclick="alert('Hello world!')">Click me!</ons-button>
+            <ons-button id="push-button">Open Navigator Page</ons-button>
+        </ons-page>
+    </template>
+
+    <template id="tabpage1.html">
+        <ons-page id="tabpage1">
+            <h1>Tabbed Page 1!</h1>
+            <p>This tabbed page is embeded in a -template- attribute</p>
+        </ons-page>
+    </template>
+
+    <template id="navigatorpage.html">
+        <ons-page id="navigatorpage">
+            <ons-toolbar>
+                <div class="left"><ons-back-button>Homepage</ons-back-button></div>        
+                <div class="center"></div>
+            </ons-toolbar>
+
+            <h1>Navigator Page!</h1>
+            <p>This page can be navigated through the -Navigator- attribute</p>
+        </ons-page>
+    </template>
+</body>
+
+</html>
